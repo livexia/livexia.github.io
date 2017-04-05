@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-05T08:21:12.000Z</updated>
+  <updated>2017-04-05T12:38:32.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -20,11 +20,15 @@
     <link href="http://blog.livexia.site/2017/04/04/music_2/"/>
     <id>http://blog.livexia.site/2017/04/04/music_2/</id>
     <published>2017-04-04T14:17:27.000Z</published>
-    <updated>2017-04-05T08:21:12.000Z</updated>
+    <updated>2017-04-05T12:38:32.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<ul><br><li><em>演唱：</em><em>Cannie</em></li><br><li><em>专辑：</em><em>Bittersweet</em></li><br><li><em>语种：</em><em>华语</em></li><br><li><em>曲风：</em><em>流行&nbsp;&nbsp;</em></li><br></ul>
-
+<p><blockquote class="blockquote-center"></blockquote></p>
+<p><ul></ul></p>
+<p><li><em>演唱：</em><em>Cannie</em></li></p>
+<p><li><em>专辑：</em><em>Bittersweet</em></li></p>
+<p><li><em>语种：</em><em>华语</em></li></p>
+<p><li><em>曲风：</em><em>流行&nbsp;&nbsp;</em></li><br><br></p>
 <hr>
 <p><br></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=418257688&auto=1&height=66"></iframe>
@@ -39,7 +43,10 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;ul&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;演唱：&lt;/em&gt;&lt;em&gt;Cannie&lt;/em&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;专辑：&lt;/em&gt;&lt;em&gt;Bittersweet&lt;/em&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;语种：&lt;/em&gt;&lt;em&gt;华语&lt;/em&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;e
+&lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ul&gt;&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;&lt;em&gt;演唱：&lt;/em&gt;&lt;em&gt;Cannie&lt;/em&gt;&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;&lt;em&gt;专辑：&lt;
     
     </summary>
     
@@ -55,26 +62,21 @@
     <link href="http://blog.livexia.site/2017/04/04/live_url/"/>
     <id>http://blog.livexia.site/2017/04/04/live_url/</id>
     <published>2017-04-04T13:15:28.000Z</published>
-    <updated>2017-04-05T08:21:21.000Z</updated>
+    <updated>2017-04-05T12:38:35.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>经常游戏，日常音乐，偶尔电影。</p>
-<p>steam/origin：livexia</p>
-<p>网易云id：livexia</p>
-</blockquote>
-<p><a href="https://live.bilibili.com/52802" target="_blank" rel="external">bilibili:livexia</a></p>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>经常游戏，日常音乐，偶尔电影。<br><br>steam/origin：livexia<br><br>网易云id：livexia<br></blockquote>
+
+<div class="note default"><p><a href="https://live.bilibili.com/52802" target="_blank" rel="external">bilibili:livexia</a> </p>
+</div>
 <embed height="540" width="96%" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="https://static.hdslb.com/live-static/swf/LivePlayerEx_1.swf?room_id=52802&cid=52802&state=LIVE" flashvars="aid=7094514&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
 
 ]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;经常游戏，日常音乐，偶尔电影。&lt;/p&gt;
-&lt;p&gt;steam/origin：livexia&lt;/p&gt;
-&lt;p&gt;网易云id：livexia&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://live.bilibili.com/528
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;经常游戏，日常音乐，偶尔电影。&lt;br&gt;&lt;br&gt;steam/origin：livexia&lt;br&gt;&lt;br&gt;网易云id：livexia&lt;br&gt;&lt;/blockquote&gt;
+
+&lt;div class=&quot;not
     
     </summary>
     
@@ -92,11 +94,16 @@
     <link href="http://blog.livexia.site/2017/04/03/music_1/"/>
     <id>http://blog.livexia.site/2017/04/03/music_1/</id>
     <published>2017-04-03T09:15:08.000Z</published>
-    <updated>2017-04-05T08:21:17.000Z</updated>
+    <updated>2017-04-05T12:38:33.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<ul class="lt mb15"><br><li><em>演唱：</em><em>Amy Chanrich</em></li><br><li><em>原唱：</em><em>薛之谦</em></li><br><li><em>分类：</em><em>翻唱</em></li><br><li><em>语种：</em><em>华语</em></li><br><li><em>曲风：</em><em>流行&nbsp;&nbsp;</em></li><br></ul>
-
+<p><blockquote class="blockquote-center"></blockquote></p>
+<p><ul class="lt mb15"></ul></p>
+<p><li><em>演唱：</em><em>Amy Chanrich</em></li></p>
+<p><li><em>原唱：</em><em>薛之谦</em></li></p>
+<p><li><em>分类：</em><em>翻唱</em></li></p>
+<p><li><em>语种：</em><em>华语</em></li></p>
+<p><li><em>曲风：</em><em>流行&nbsp;&nbsp;</em></li><br><br></p>
 <hr>
 <p><br></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=437387277&auto=1&height=66"></iframe>
@@ -113,7 +120,9 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;ul class=&quot;lt mb15&quot;&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;演唱：&lt;/em&gt;&lt;em&gt;Amy Chanrich&lt;/em&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;原唱：&lt;/em&gt;&lt;em&gt;薛之谦&lt;/em&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;em&gt;分类：&lt;/em&gt;&lt;em&gt;翻唱&lt;/em&gt;&lt;
+&lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ul class=&quot;lt mb15&quot;&gt;&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;&lt;em&gt;演唱：&lt;/em&gt;&lt;em&gt;Amy Chanrich&lt;/em&gt;&lt;/l
     
     </summary>
     
