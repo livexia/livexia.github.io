@@ -1,0 +1,919 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="python,scrapy," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="入门学习scrapy系统：osx  按照scrapy-chs.readthedocs.io 目标网站 Open Directory Project  安装Scrapy Anaconda： conda install -c scrapinghub scrapy 创建项目tutorial $ scrapy startproject tutorial 项目结构 $ tree tutorial tutor">
+<meta name="keywords" content="python,scrapy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The first week|第一周">
+<meta property="og:url" content="http://blog.livexia.site/2017/04/03/post_2/index.html">
+<meta property="og:site_name" content="livexia">
+<meta property="og:description" content="入门学习scrapy系统：osx  按照scrapy-chs.readthedocs.io 目标网站 Open Directory Project  安装Scrapy Anaconda： conda install -c scrapinghub scrapy 创建项目tutorial $ scrapy startproject tutorial 项目结构 $ tree tutorial tutor">
+<meta property="og:updated_time" content="2017-04-05T08:21:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The first week|第一周">
+<meta name="twitter:description" content="入门学习scrapy系统：osx  按照scrapy-chs.readthedocs.io 目标网站 Open Directory Project  安装Scrapy Anaconda： conda install -c scrapinghub scrapy 创建项目tutorial $ scrapy startproject tutorial 项目结构 $ tree tutorial tutor">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.livexia.site/2017/04/03/post_2/"/>
+
+
+
+
+
+  <title> The first week|第一周 | livexia </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-96765454-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">livexia</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://blog.livexia.site/2017/04/03/post_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="livexia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="livexia">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                The first week|第一周
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T10:14:58+08:00">
+                2017-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/创新实践/" itemprop="url" rel="index">
+                    <span itemprop="name">创新实践</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/03/post_2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/03/post_2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="入门学习scrapy"><a href="#入门学习scrapy" class="headerlink" title="入门学习scrapy"></a>入门学习scrapy</h2><p>系统：osx</p>
+<blockquote>
+<p>按照<a href="http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/tutorial.html" target="_blank" rel="external">scrapy-chs.readthedocs.io</a></p>
+<p>目标网站 <a href="http://www.dmoz.org/" target="_blank" rel="external">Open Directory Project</a></p>
+</blockquote>
+<p>安装Scrapy</p>
+<p>Anaconda：</p>
+<pre><code>conda install -c scrapinghub scrapy
+</code></pre><p>创建项目tutorial</p>
+<pre><code>$ scrapy startproject tutorial
+</code></pre><p>项目结构</p>
+<pre><code>$ tree tutorial
+tutorial
+├── scrapy.cfg
+└── tutorial
+   ├── __init__.py
+   ├── __pycache__
+   ├── items.py
+   ├── middlewares.py
+   ├── pipelines.py
+   ├── settings.py
+   └── spiders
+       ├── __init__.py
+       └── __pycache__
+</code></pre><p>定义item</p>
+<p>用来存放名字、url、网站的描述</p>
+<pre><code>vim ./totorial/totorial/items.py
+import scrapy
+
+class DmozItem(scrapy.Item):
+   title = scrapy.Field()
+   link = scrapy.Field()
+   desc = scrapy.Field()
+   pass
+</code></pre><p>写一个spider</p>
+<pre><code>$ vim ./tutorial/tutorial/spiders/dmoz_spider.py
+
+import scrapy
+
+class DmozSpider(scrapy.Spider):
+   name = &quot;dmoz&quot;
+   allowed_domains = [&quot;dmoz.org&quot;]
+   start_urls = [
+       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;,
+       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot;
+   ]
+
+   def parse(self, response):
+       filename = response.url.split(&quot;/&quot;)[-2] + &apos;.html&apos;
+       with open(filename, &apos;wb&apos;) as f:
+           f.write(response.body)
+
+#name : 该spider的名字，唯一
+
+#start_urls : 该spider的起始地址，后续的地址由起始地址爬取得到
+
+#parse() 是spider的一个方法。 被调用时，每个初始URL完成下载后生成的 Response 对象将会作为唯一的参数传递给该函数。 该方法负责解析返回的数据(response data)，提取数据(生成item)以及生成需要进一步处理的URL的 Request 对象。
+</code></pre><p>启动spider：<br>根目录下</p>
+<pre><code>$ scrapy crawl dmoz
+2017-03-16 14:55:22 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: tutorial)
+2017-03-16 14:55:22 [scrapy.utils.log] INFO: Overridden settings: {&apos;BOT_NAME&apos;: &apos;tutorial&apos;, &apos;NEWSPIDER_MODULE&apos;: &apos;tutorial.spiders&apos;, &apos;ROBOTSTXT_OBEY&apos;: True, &apos;SPIDER_MODULES&apos;: [&apos;tutorial.spiders&apos;]}
+2017-03-16 14:55:22 [scrapy.middleware] INFO: Enabled extensions:
+[&apos;scrapy.extensions.corestats.CoreStats&apos;,
+&apos;scrapy.extensions.telnet.TelnetConsole&apos;,
+&apos;scrapy.extensions.logstats.LogStats&apos;]
+2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[&apos;scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.useragent.UserAgentMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.retry.RetryMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.redirect.RedirectMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.cookies.CookiesMiddleware&apos;,
+&apos;scrapy.downloadermiddlewares.stats.DownloaderStats&apos;]
+2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+[&apos;scrapy.spidermiddlewares.httperror.HttpErrorMiddleware&apos;,
+&apos;scrapy.spidermiddlewares.offsite.OffsiteMiddleware&apos;,
+&apos;scrapy.spidermiddlewares.referer.RefererMiddleware&apos;,
+&apos;scrapy.spidermiddlewares.urllength.UrlLengthMiddleware&apos;,
+&apos;scrapy.spidermiddlewares.depth.DepthMiddleware&apos;]
+2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-03-16 14:55:23 [scrapy.core.engine] INFO: Spider opened
+2017-03-16 14:55:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-16 14:55:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-03-16 14:55:25 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/robots.txt&gt; (referer: None)
+2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&gt; (referer: None)
+2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&gt; (referer: None)
+2017-03-16 14:55:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-03-16 14:55:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{&apos;downloader/request_bytes&apos;: 734,
+&apos;downloader/request_count&apos;: 3,
+&apos;downloader/request_method_count/GET&apos;: 3,
+&apos;downloader/response_bytes&apos;: 16015,
+&apos;downloader/response_count&apos;: 3,
+&apos;downloader/response_status_count/200&apos;: 3,
+&apos;finish_reason&apos;: &apos;finished&apos;,
+&apos;finish_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 26, 472574),
+&apos;log_count/DEBUG&apos;: 4,
+&apos;log_count/INFO&apos;: 7,
+&apos;response_received_count&apos;: 3,
+&apos;scheduler/dequeued&apos;: 2,
+&apos;scheduler/dequeued/memory&apos;: 2,
+&apos;scheduler/enqueued&apos;: 2,
+&apos;scheduler/enqueued/memory&apos;: 2,
+&apos;start_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 23, 30734)}
+2017-03-16 14:55:26 [scrapy.core.engine] INFO: Spider closed (finished)
+</code></pre><p>目录结构</p>
+<pre><code>$ tree tutorial
+tutorial
+├── Books.html
+├── Resources.html
+├── scrapy.cfg
+└── tutorial
+   ├── __init__.py
+   ├── __pycache__
+   │   ├── __init__.cpython-36.pyc
+   │   └── settings.cpython-36.pyc
+   ├── items.py
+   ├── middlewares.py
+   ├── pipelines.py
+   ├── settings.py
+   └── spiders
+       ├── __init__.py
+       ├── __pycache__
+       │   ├── __init__.cpython-36.pyc
+       │   └── dmoz_spider.cpython-36.pyc
+       └── dmoz_spider.py
+</code></pre><p>提取数据<br>XPath</p>
+<p>周总结：周一、二学习了部分正则（没有做笔记），之后看了部分的urllib，在之后就是开始学习scrapy，目前才处于开始学习的阶段。<br>因为期间电脑磁盘出了问题，学习时间有所下降。</p>
+<p>下周目标：入门学习scrapy，完整实现爬取dmoz，尝试利用scrapy对豆瓣电影top 250进行爬取。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/scrapy/" rel="tag"># scrapy</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/03/post_3/" rel="next" title="The second week|第二周">
+                <i class="fa fa-chevron-left"></i> The second week|第二周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/03/post_1/" rel="prev" title="Innovation practice|创新实践 方向选择">
+                Innovation practice|创新实践 方向选择 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="livexia" />
+          <p class="site-author-name" itemprop="name">livexia</p>
+           
+              <p class="site-description motion-element" itemprop="description">Nothing New</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#入门学习scrapy"><span class="nav-number">1.</span> <span class="nav-text">入门学习scrapy</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">livexia</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://livexia.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://blog.livexia.site/2017/04/03/post_2/';
+          this.page.identifier = '2017/04/03/post_2/';
+          this.page.title = 'The first week|第一周';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://livexia.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
