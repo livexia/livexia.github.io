@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -107,7 +107,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
@@ -402,8 +402,11 @@
 
 
 遥远的歌
-词/曲/编曲/演唱：Cannie Y.写了一首遥远的歌送给遥远的你你的笑声我的歌声编织在一起这是我对旧时光最温暖的回忆哭着笑着痛着疯着跟过去别离旧旧的琴弦在吟唱苍白的故事而你腼腆的笑容
-          ...
+词/曲/编曲/演唱：Cannie Y.写了一首遥远的歌送给遥远的你你的笑声我的歌声编织在一起这是我对旧时光最温暖的回忆哭着笑着痛着疯着跟过去别离旧旧的琴弦在吟唱苍白的故事而你腼腆的笑容是故事的开始迎面而来的微风像你说话的样子没有任何预兆这故事戛然而止人生总有一些些遗憾那就随它去短暂的阳光也一样温暖了心灵总有些时光值得怀念却又回不去回不去的留不下的对你的回忆人生总有一些些遗憾那就随它去短暂的阳光也一样温暖了心灵总有些时光值得怀念却又回不去回不去的留不下的对你的回忆(Repeat till the end)
+
+链接网易云
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/04/music_2/#more" rel="contents">
@@ -739,8 +742,13 @@ bilibili:livexia
 
 
 其实，我就在你方圆几里
-                 Amy Chanrich介绍： 搬运自5sing其实，方圆几里，你还要我怎样，刚刚好四首串烧不需要借口爱淡了就放手我不想听你也没说
-          ...
+                 Amy Chanrich介绍： 搬运自5sing其实，方圆几里，你还要我怎样，刚刚好四首串烧不需要借口爱淡了就放手我不想听你也没说平静的交错随便找个理由决定了就别回头不爱你的人说什么都没用分开时难过不能说谁没谁不能好好过那天我们走了很久没有争吵过分开时难过不要说如果被你一笑而过还不如让你选择想要的生活与其在你不要的世界里不如痛快把你忘记这道理谁都懂 说容易 爱透了还要嘴硬我宁愿 留在你方圆几里我的心 要不回就送你因为我爱你 和你没关系与其在你不要的世界里不如痛快把你忘记我都会轻描淡写仿佛没爱过其实我根本没人说其实我没你不能活可惜我 谁劝都不听分开后我会笑着说当朋友问你关于我我都会轻描淡写仿佛没爱过其实我根本没人说陪你走的路你不能忘因为那是我 最快乐的时光你别太在意我身上的记号
+
+
+链接5Sing
+网易云
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/03/music_1/#more" rel="contents">
@@ -904,8 +912,17 @@ TODO：完善爬虫，完整解决输出格式问题，加入随机ua模块。
 代码：livexia/douban_top250
 解决输出问题，整理输出格式，深入理解了items，pipeline。输出无错误。截图见github。
 增加了随机UA模块，中间件为useragent.py,文件结构如下
-├──
-          ...
+├── douban_top250
+│   └── spiders
+│       ├── __init__.py
+│       ├── top250.py
+│       └── useragent.py
+│    …...
+运行结果见github。
+下周
+TODO:加入其他反爬虫功能，尝试编写针对网易云的爬虫
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/03/post_4/#more" rel="contents">
@@ -1068,8 +1085,16 @@ TODO：完善爬虫，完整解决输出格式问题，加入随机ua模块。
 目标链接为：toscrape
 完成网站练习之后，我开始尝试爬取豆瓣电影top250，由于豆瓣使用了检测UA信息的反爬虫技术，但是我没有添加ua信息，导致爬虫返回403，没有取得任何结果。
 在settings.py中加入ua，问题解决。
-s
-          ...
+scrapy crawl top250 -o top250.json
+启动spider，将结果储存在top250.json文件中，由于编码问题，json无法直接阅读。
+scrapy crawl top250 -o top250.csv
+启动spider，将结果储存在top250.csv文件中
+利用Pipeline 处理爬取得到的数据，固定格式。
+转化编码失败，通过pipeline错误。
+TODO：完善爬虫，完整解决输出格式问题，加入随机ua模块。
+代码：livexia/douban_top250
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/03/post_3/#more" rel="contents">
@@ -1237,7 +1262,27 @@ s
 Anaconda：
 conda install -c scrapinghub scrapy
 创建项目tutorial
-$ scrap
+$ scrapy startproject tutorial
+项目结构
+$ tree tutorial
+tutorial
+├── scrapy.cfg
+└── tutorial
+   ├── __init__.py
+   ├── __pycache__
+   ├── items.py
+   ├── middlewares.py
+   ├── pipelines.py
+   ├── settings.py
+   └── spiders
+       ├── __init__.py
+       └── __pycache__
+定义item
+用来存放名字、url、网站的描述
+vim ./totorial/totorial/items.py
+import scrapy
+
+class DmozItem(scrap
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1413,8 +1458,15 @@ $ scrap
 代理池，模拟UA…..
 
 主要目标
-模拟登录网易云音乐，获取个人歌单，并抓取歌曲热门评论
-          ...
+模拟登录网易云音乐，获取个人歌单，并抓取歌曲热门评论。
+
+抓取游戏销售平台steam上所有游戏的价格及优惠信息。(酌情)
+
+抓取当周销量销售前100游戏的热门评价(酌情)
+
+
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/03/post_1/#more" rel="contents">
@@ -1605,7 +1657,7 @@ $ scrap
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -1678,6 +1730,13 @@ $ scrap
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
 
