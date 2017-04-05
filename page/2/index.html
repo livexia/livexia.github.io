@@ -392,21 +392,15 @@
 
       
         
-          
-            <p> 由于中文教程版本以及目标网站的下线，我改学英文最新的教程。</p>
-<p>目标链接为：<a href="http://quotes.toscrape.com/" target="_blank" rel="external">toscrape</a></p>
-<p>完成网站练习之后，我开始尝试爬取豆瓣电影top250，由于豆瓣使用了检测UA信息的反爬虫技术，但是我没有添加ua信息，导致爬虫返回403，没有取得任何结果。</p>
-<p>在settings.py中加入ua，问题解决。</p>
-<pre><code>scrapy crawl top250 -o top250.json
-</code></pre><p>启动spider，将结果储存在top250.json文件中，由于编码问题，json无法直接阅读。</p>
-<pre><code>scrapy crawl top250 -o top250.csv
-</code></pre><p>启动spider，将结果储存在top250.csv文件中</p>
-<p>利用Pipeline 处理爬取得到的数据，固定格式。</p>
-<p>转化编码失败，通过pipeline错误。</p>
-<p>TODO：完善爬虫，完整解决输出格式问题，加入随机ua模块。</p>
-<p>代码：<a href="https://github.com/livexia/douban_top250" target="_blank" rel="external">livexia/douban_top250</a></p>
-
-          
+          <p> 由于中文教程版本以及目标网站的下线，我改学英文最新的教程。</p>
+<p>目标链接为：<a href="http://quotes.toscrape.com/">toscrape</a><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/03/post_3/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -557,143 +551,14 @@
 
       
         
-          
-            <h2 id="入门学习scrapy"><a href="#入门学习scrapy" class="headerlink" title="入门学习scrapy"></a>入门学习scrapy</h2><p>系统：osx</p>
-<blockquote>
-<p>按照<a href="http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/tutorial.html" target="_blank" rel="external">scrapy-chs.readthedocs.io</a></p>
-<p>目标网站 <a href="http://www.dmoz.org/" target="_blank" rel="external">Open Directory Project</a></p>
-</blockquote>
-<p>安装Scrapy</p>
-<p>Anaconda：</p>
-<pre><code>conda install -c scrapinghub scrapy
-</code></pre><p>创建项目tutorial</p>
-<pre><code>$ scrapy startproject tutorial
-</code></pre><p>项目结构</p>
-<pre><code>$ tree tutorial
-tutorial
-├── scrapy.cfg
-└── tutorial
-   ├── __init__.py
-   ├── __pycache__
-   ├── items.py
-   ├── middlewares.py
-   ├── pipelines.py
-   ├── settings.py
-   └── spiders
-       ├── __init__.py
-       └── __pycache__
-</code></pre><p>定义item</p>
-<p>用来存放名字、url、网站的描述</p>
-<pre><code>vim ./totorial/totorial/items.py
-import scrapy
-
-class DmozItem(scrapy.Item):
-   title = scrapy.Field()
-   link = scrapy.Field()
-   desc = scrapy.Field()
-   pass
-</code></pre><p>写一个spider</p>
-<pre><code>$ vim ./tutorial/tutorial/spiders/dmoz_spider.py
-
-import scrapy
-
-class DmozSpider(scrapy.Spider):
-   name = &quot;dmoz&quot;
-   allowed_domains = [&quot;dmoz.org&quot;]
-   start_urls = [
-       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;,
-       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot;
-   ]
-
-   def parse(self, response):
-       filename = response.url.split(&quot;/&quot;)[-2] + &apos;.html&apos;
-       with open(filename, &apos;wb&apos;) as f:
-           f.write(response.body)
-
-#name : 该spider的名字，唯一
-
-#start_urls : 该spider的起始地址，后续的地址由起始地址爬取得到
-
-#parse() 是spider的一个方法。 被调用时，每个初始URL完成下载后生成的 Response 对象将会作为唯一的参数传递给该函数。 该方法负责解析返回的数据(response data)，提取数据(生成item)以及生成需要进一步处理的URL的 Request 对象。
-</code></pre><p>启动spider：<br>根目录下</p>
-<pre><code>$ scrapy crawl dmoz
-2017-03-16 14:55:22 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: tutorial)
-2017-03-16 14:55:22 [scrapy.utils.log] INFO: Overridden settings: {&apos;BOT_NAME&apos;: &apos;tutorial&apos;, &apos;NEWSPIDER_MODULE&apos;: &apos;tutorial.spiders&apos;, &apos;ROBOTSTXT_OBEY&apos;: True, &apos;SPIDER_MODULES&apos;: [&apos;tutorial.spiders&apos;]}
-2017-03-16 14:55:22 [scrapy.middleware] INFO: Enabled extensions:
-[&apos;scrapy.extensions.corestats.CoreStats&apos;,
-&apos;scrapy.extensions.telnet.TelnetConsole&apos;,
-&apos;scrapy.extensions.logstats.LogStats&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
-[&apos;scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.useragent.UserAgentMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.retry.RetryMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.redirect.RedirectMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.cookies.CookiesMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.stats.DownloaderStats&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled spider middlewares:
-[&apos;scrapy.spidermiddlewares.httperror.HttpErrorMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.offsite.OffsiteMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.referer.RefererMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.urllength.UrlLengthMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.depth.DepthMiddleware&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled item pipelines:
-[]
-2017-03-16 14:55:23 [scrapy.core.engine] INFO: Spider opened
-2017-03-16 14:55:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-03-16 14:55:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-03-16 14:55:25 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/robots.txt&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-03-16 14:55:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{&apos;downloader/request_bytes&apos;: 734,
-&apos;downloader/request_count&apos;: 3,
-&apos;downloader/request_method_count/GET&apos;: 3,
-&apos;downloader/response_bytes&apos;: 16015,
-&apos;downloader/response_count&apos;: 3,
-&apos;downloader/response_status_count/200&apos;: 3,
-&apos;finish_reason&apos;: &apos;finished&apos;,
-&apos;finish_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 26, 472574),
-&apos;log_count/DEBUG&apos;: 4,
-&apos;log_count/INFO&apos;: 7,
-&apos;response_received_count&apos;: 3,
-&apos;scheduler/dequeued&apos;: 2,
-&apos;scheduler/dequeued/memory&apos;: 2,
-&apos;scheduler/enqueued&apos;: 2,
-&apos;scheduler/enqueued/memory&apos;: 2,
-&apos;start_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 23, 30734)}
-2017-03-16 14:55:26 [scrapy.core.engine] INFO: Spider closed (finished)
-</code></pre><p>目录结构</p>
-<pre><code>$ tree tutorial
-tutorial
-├── Books.html
-├── Resources.html
-├── scrapy.cfg
-└── tutorial
-   ├── __init__.py
-   ├── __pycache__
-   │   ├── __init__.cpython-36.pyc
-   │   └── settings.cpython-36.pyc
-   ├── items.py
-   ├── middlewares.py
-   ├── pipelines.py
-   ├── settings.py
-   └── spiders
-       ├── __init__.py
-       ├── __pycache__
-       │   ├── __init__.cpython-36.pyc
-       │   └── dmoz_spider.cpython-36.pyc
-       └── dmoz_spider.py
-</code></pre><p>提取数据<br>XPath</p>
-<p>周总结：周一、二学习了部分正则（没有做笔记），之后看了部分的urllib，在之后就是开始学习scrapy，目前才处于开始学习的阶段。<br>因为期间电脑磁盘出了问题，学习时间有所下降。</p>
-<p>下周目标：入门学习scrapy，完整实现爬取dmoz，尝试利用scrapy对豆瓣电影top 250进行爬取。</p>
-
-          
+          <h2 id="入门学习scrapy"><a href="#入门学习scrapy" class="headerlink" title="入门学习scrapy"></a>入门学习scrapy</h2><p>系统：osx<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/03/post_2/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -844,32 +709,15 @@ tutorial
 
       
         
-          
-            <h1 id="方向：利用Python抓取互联网信息"><a href="#方向：利用Python抓取互联网信息" class="headerlink" title="方向：利用Python抓取互联网信息"></a><em>方向：利用Python抓取互联网信息</em></h1><h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul>
-<li><p>网页知识，浏览器抓包、拦截</p>
-</li>
-<li><p>异常处理，浏览器代码分析</p>
-</li>
-<li><p>多线程，多进程编程</p>
-</li>
-<li><p>爬虫模块：urllib,requests….</p>
-</li>
-<li><p>正则表达式</p>
-</li>
-<li><p>爬虫框架Scrapy</p>
-</li>
-<li>代理池，模拟UA…..</li>
-</ul>
-<h2 id="主要目标"><a href="#主要目标" class="headerlink" title="主要目标"></a>主要目标</h2><ul>
-<li><p>模拟登录网易云音乐，获取个人歌单，并抓取歌曲热门评论。</p>
-</li>
-<li><p>抓取游戏销售平台steam上所有游戏的价格及优惠信息。(酌情)</p>
-</li>
-<li><p>抓取当周销量销售前100游戏的热门评价(酌情)</p>
-</li>
-</ul>
-
-          
+          <h1 id="方向：利用Python抓取互联网信息"><a href="#方向：利用Python抓取互联网信息" class="headerlink" title="方向：利用Python抓取互联网信息"></a><em>方向：利用Python抓取互联网信息</em></h1><h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul>
+<li>网页知识，浏览器抓包、拦截
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/03/post_1/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
