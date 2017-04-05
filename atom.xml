@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-05T13:34:45.000Z</updated>
+  <updated>2017-04-05T13:45:36.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -20,18 +20,19 @@
     <link href="http://blog.livexia.site/2017/04/05/music_3/"/>
     <id>http://blog.livexia.site/2017/04/05/music_3/</id>
     <published>2017-04-05T13:23:08.000Z</published>
-    <updated>2017-04-05T13:34:45.000Z</updated>
+    <updated>2017-04-05T13:45:36.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<p><ul><li>演唱：以冬</li></ul></p>
-<p><li>专辑：我的一个道姑朋友</li></p>
-<p><li>语种：华语</li></p>
-<p><li>曲风：流行、古风</li><a id="more"></a></p>
+<ul>
+<li>演唱：以冬</li>
+<li>专辑：我的一个道姑朋友</li>
+<li>语种：华语</li>
+<li>曲风：流行、古风<a id="more"></a></li>
+</ul>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=437250607&auto=1&height=66"></iframe>
 
-<p></p><h2>我的一个道姑朋友（Cover：Lon）</h2><p></p>
-<p></p><p>作曲 : 《一番星》</p><p><br>作词 : 陆菱纱<br>原唱：LON<br>后期：圣雨轻纱</p>
+<h2 id="我的一个道姑朋友（Cover：Lon）"><a href="#我的一个道姑朋友（Cover：Lon）" class="headerlink" title="我的一个道姑朋友（Cover：Lon）"></a>我的一个道姑朋友（Cover：Lon）</h2><p>作曲 : 《一番星》<br>作词 : 陆菱纱<br>原唱：LON<br>后期：圣雨轻纱</p>
 <p>作曲 : 《一番星》<br>作词 : 陆菱纱<br>而你撑伞拥我入怀中，<br>一字一句誓言多慎重。<br>你眼中有柔情千种，<br>如脉脉春风，冰雪也消融。<br>原唱：LON<br>后期：圣雨轻纱<br>那年长街春意正浓，<br>策马同游，烟雨如梦。<br>檐下躲雨，<br>望进一双，深邃眼瞳，<br>宛如华山夹着细雪的微风。</p>
 <p>雨丝微凉，<br>风吹过暗香朦胧。<br>一时心头悸动，似你温柔剑锋，<br>过处翩若惊鸿。</p>
 <p>是否情字写来都空洞，<br>一笔一画斟酌着奉送，<br>甘愿卑微换个笑容，<br>或沦为平庸。</p>
@@ -54,10 +55,11 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;演唱：以冬&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;专辑：我的一个道姑朋友&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;语种：华语&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;曲风：流行、古风&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;演唱：以冬&lt;/li&gt;
+&lt;li&gt;专辑：我的一个道姑朋友&lt;/li&gt;
+&lt;li&gt;语种：华语&lt;/li&gt;
+&lt;li&gt;曲风：流行、古风
     
     </summary>
     
@@ -73,19 +75,19 @@
     <link href="http://blog.livexia.site/2017/04/04/music_2/"/>
     <id>http://blog.livexia.site/2017/04/04/music_2/</id>
     <published>2017-04-04T14:17:27.000Z</published>
-    <updated>2017-04-05T13:37:24.000Z</updated>
+    <updated>2017-04-05T13:45:32.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<p><ul><li>演唱：Cannie</li></ul></p>
-<p><li>专辑：Bittersweet</li></p>
-<p><li>语种：华语</li></p>
-<p><li>曲风：流行&nbsp;&nbsp;</li><a id="more"></a></p>
+<ul>
+<li>演唱：Cannie</li>
+<li>专辑：Bittersweet</li>
+<li>语种：华语</li>
+<li>曲风：流行<a id="more"></a></li>
+</ul>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=418257688&auto=1&height=66"></iframe>
 
-<p></p><h2>遥远的歌</h2><p></p>
-<p>词/曲/编曲/演唱：Cannie Y.</p>
-
+<h2 id="遥远的歌"><a href="#遥远的歌" class="headerlink" title="遥远的歌"></a>遥远的歌</h2><p>词/曲/编曲/演唱：Cannie Y.</p>
 <p>写了一首遥远的歌送给遥远的你</p>
 <p>你的笑声我的歌声编织在一起</p>
 <p>这是我对旧时光最温暖的回忆</p>
@@ -109,10 +111,11 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;演唱：Cannie&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;专辑：Bittersweet&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;语种：华语&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;曲风：流行&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;演唱：Cannie&lt;/li&gt;
+&lt;li&gt;专辑：Bittersweet&lt;/li&gt;
+&lt;li&gt;语种：华语&lt;/li&gt;
+&lt;li&gt;曲风：流行
     
     </summary>
     
@@ -158,22 +161,30 @@
     <link href="http://blog.livexia.site/2017/04/03/music_1/"/>
     <id>http://blog.livexia.site/2017/04/03/music_1/</id>
     <published>2017-04-03T09:15:08.000Z</published>
-    <updated>2017-04-05T13:37:11.000Z</updated>
+    <updated>2017-04-05T13:45:34.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<p><ul><li>演唱：Amy Chanrich</li></ul></p>
-<p><li>原唱：薛之谦</li></p>
-<p><li>分类：翻唱</li></p>
-<p><li>语种：华语</li></p>
-<p><li>曲风：流行&nbsp;&nbsp;</li><a id="more"></a></p>
+<ul>
+<li>演唱：Amy Chanrich</li>
+<li>原唱：薛之谦</li>
+<li>分类：翻唱</li>
+<li>语种：华语</li>
+<li>曲风：流行<a id="more"></a></li>
+</ul>
 <hr>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=437387277&auto=1&height=66"></iframe>
 
-<p></p><h2>其实，我就在你方圆几里</h2><p></p>
-<p>                 Amy Chanrich</p>
-
-<p>介绍： 搬运自5sing<br><br>其实，方圆几里，你还要我怎样，刚刚好<br>四首串烧<br><br>不需要借口<br>爱淡了就放手<br>我不想听<br>你也没说平静的交错<br><br>随便找个理由<br>决定了就别回头<br>不爱你的人<br>说什么都没用<br><br>分开时难过不能说<br>谁没谁不能好好过<br>那天我们走了很久没有争吵过<br><br>分开时难过不要说<br>如果被你一笑而过<br>还不如让你选择想要的生活<br><br>与其在你不要的世界里<br>不如痛快把你忘记<br>这道理谁都懂 说容易 爱透了还要嘴硬<br>我宁愿 留在你方圆几里<br>我的心 要不回就送你<br>因为我爱你 和你没关系<br><br>与其在你不要的世界里<br>不如痛快把你忘记<br>我都会轻描淡写仿佛没爱过<br>其实我根本没人说<br>其实我没你不能活<br>可惜我 谁劝都不听<br><br>分开后我会笑着说<br>当朋友问你关于我<br>我都会轻描淡写仿佛没爱过<br>其实我根本没人说<br>陪你走的路你不能忘<br>因为那是我 最快乐的时光<br><br>你别太在意我身上的记号<br></p>
-
+<h2 id="其实，我就在你方圆几里"><a href="#其实，我就在你方圆几里" class="headerlink" title="其实，我就在你方圆几里"></a>其实，我就在你方圆几里</h2><p>Amy Chanrich</p>
+<p>介绍： 搬运自5sing</p>
+<p>其实，方圆几里，你还要我怎样，刚刚好<br>四首串烧</p>
+<p>不需要借口<br>爱淡了就放手<br>我不想听<br>你也没说平静的交错</p>
+<p>随便找个理由<br>决定了就别回头<br>不爱你的人<br>说什么都没用</p>
+<p>分开时难过不能说<br>谁没谁不能好好过<br>那天我们走了很久没有争吵过</p>
+<p>分开时难过不要说<br>如果被你一笑而过<br>还不如让你选择想要的生活</p>
+<p>与其在你不要的世界里<br>不如痛快把你忘记<br>这道理谁都懂 说容易 爱透了还要嘴硬<br>我宁愿 留在你方圆几里<br>我的心 要不回就送你<br>因为我爱你 和你没关系</p>
+<p>与其在你不要的世界里<br>不如痛快把你忘记<br>我都会轻描淡写仿佛没爱过<br>其实我根本没人说<br>其实我没你不能活<br>可惜我 谁劝都不听</p>
+<p>分开后我会笑着说<br>当朋友问你关于我<br>我都会轻描淡写仿佛没爱过<br>其实我根本没人说<br>陪你走的路你不能忘<br>因为那是我 最快乐的时光</p>
+<p>你别太在意我身上的记号</p>
 <hr>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://5sing.kugou.com/fc/15329562.html" target="_blank" rel="external">5Sing</a></p>
 <p><a href="http://music.163.com/#/program?id=791256820" target="_blank" rel="external">网易云</a></p>
@@ -182,11 +193,12 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;演唱：Amy Chanrich&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;原唱：薛之谦&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;分类：翻唱&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;语种：华语&lt;/li&gt;&lt;/p&gt;
-&lt;p&gt;&lt;li&gt;曲风：流行&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;演唱：Amy Chanrich&lt;/li&gt;
+&lt;li&gt;原唱：薛之谦&lt;/li&gt;
+&lt;li&gt;分类：翻唱&lt;/li&gt;
+&lt;li&gt;语种：华语&lt;/li&gt;
+&lt;li&gt;曲风：流行
     
     </summary>
     
