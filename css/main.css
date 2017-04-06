@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #93ff5c;
+  background: #2525e0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2632,7 +2632,7 @@ pre .javascript .function {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #3b5f94;
+  background: #262a30;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
