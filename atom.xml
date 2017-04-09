@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-08T16:33:13.000Z</updated>
+  <updated>2017-04-09T11:05:31.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The fourth week|第四周</title>
+    <link href="http://blog.livexia.site/2017/04/09/post_5/"/>
+    <id>http://blog.livexia.site/2017/04/09/post_5/</id>
+    <published>2017-04-09T11:02:59.000Z</published>
+    <updated>2017-04-09T11:05:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>TODO:加入其他反反爬虫功能，尝试编写针对网易云的爬虫</p>
+<p>由于豆瓣top250没有什么反爬虫，于是我决定对网易云音乐下手，本周先对给定歌单进行获取，得到歌单的基本信息。</p>
+<p>新建scrapy项目netease_music, </p>
+<p>增加spider，name = getlist</p>
+<p>尝试老方法对页面进行爬取书发现返回为js代码段。</p>
+<p>由于网易云将所有实质内容存放在iframe标签呢，利用request方法无法取得页面内容。</p>
+<p>在网上也看到有人利用selenium先得到iframe标签内内的html代码，再用xpath，对其进行获取。</p>
+<p>我略微搜索发现selenium本身测试平台，拿来跑爬虫效率太低，便决定寻求其他方法。</p>
+<p>之后在知乎上发现有网易云的api，github：metowolf/NeteaseCloudMusicApi，metowolf/Meting</p>
+<p>采取使用网易云音乐的api方式来获取歌单信息。<br>利用api可以简单获取到含有歌单所有信息的json文件，不需要scrapy进行爬取。</p>
+<p>利用api也可以抓取评论，找到API简直省力几万倍</p>
+<p>总结：本周大部分时间都花在如何解析iframe中，先有抓取方案过于臃肿浪费，找到网易云音乐api省事不少，具体实现本周尚未写好，由于api直接可以导出json，因此这周大部分针对抓取单一歌单的信息的努力直接实现。对于抓取到的.json文件，也可以通过python解析，获取需要的数据。</p>
+<p>TODO：解析通过api获得的json文件，留取需要的数据，存入数据库中。模拟登陆网易云，爬取个人的所有歌单，利用网易云音乐api，获得json文件，将其存储在mongdb中。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本周针对网易云音乐抓取歌单，结果找到api，直接可以获取歌单信息
+    
+    </summary>
+    
+      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
+    
+      <category term="scrapy" scheme="http://blog.livexia.site/tags/scrapy/"/>
+    
+  </entry>
   
   <entry>
     <title>个人随想</title>
