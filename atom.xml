@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-10T03:56:23.000Z</updated>
+  <updated>2017-04-10T03:57:50.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Seasons In The Sun</title>
+    <title>歌曲推荐：Seasons In The Sun</title>
     <link href="http://blog.livexia.site/2017/04/10/music_4/"/>
     <id>http://blog.livexia.site/2017/04/10/music_4/</id>
     <published>2017-04-10T03:46:30.000Z</published>
-    <updated>2017-04-10T03:56:23.000Z</updated>
+    <updated>2017-04-10T03:57:50.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <ul>
@@ -31,7 +31,7 @@
 <li>曲风：慢摇<a id="more"></a></li>
 </ul>
 <hr>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3950239&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3950239&auto=0&height=66"></iframe>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29775439&auto=0&height=66"></iframe>
 
