@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-10T04:07:56.000Z</updated>
+  <updated>2017-04-10T12:21:54.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有意思的故事</title>
+    <link href="http://blog.livexia.site/2017/04/10/amusing/"/>
+    <id>http://blog.livexia.site/2017/04/10/amusing/</id>
+    <published>2017-04-10T12:18:10.000Z</published>
+    <updated>2017-04-10T12:21:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<div class="note info"><p> 2017-04-10 20:19:22+08:00<br>从前有个小孩很调皮，他们村是一个过路村，每天都有很多陌生人从他们村口经过，有一天这个熊孩子站在村口的树上对着路过的人撒尿，结果碰到一个大叔被尿了一身，大叔让小孩下来，非但没有责怪他，还夸他尿得远，尿得多，然后笑呵呵的走了。回家后大叔的妻子听说后就问他为什么不教训那个孩子一顿，大叔笑着说：我又不是他爹，干嘛帮他教育孩子啊？等别人帮他吧！故事的结局就是不到一年，就听说那个孩子被当地一个恶霸打死了……</p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      自己所看见的有趣小故事
+    
+    </summary>
+    
+      <category term="故事" scheme="http://blog.livexia.site/categories/%E6%95%85%E4%BA%8B/"/>
+    
+    
+      <category term="story" scheme="http://blog.livexia.site/tags/story/"/>
+    
+  </entry>
   
   <entry>
     <title>歌曲推荐：Seasons In The Sun</title>
