@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-10T12:21:54.000Z</updated>
+  <updated>2017-04-16T14:37:53.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The fifth week|第五周</title>
+    <link href="http://blog.livexia.site/2017/04/16/post_6/"/>
+    <id>http://blog.livexia.site/2017/04/16/post_6/</id>
+    <published>2017-04-16T14:35:52.000Z</published>
+    <updated>2017-04-16T14:37:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在上周尝试爬取网易云音乐，得到了网易云音乐的api，在听取老师建议下，我决定先暂时不利用网易云音乐的api。</p>
+<p>尝试不使用api的方法来抓取内容，大体上现在有两种方法均可以达到目的，</p>
+<p>一是scrapy+splash/selenium…</p>
+<p>二是利用requests+bs4</p>
+<p>第一种方法由于需要部署环境且在爬取过程中需要花费大量的时间，并且存在数据丢失问题</p>
+<p>我在这一周暂时只考虑利用requests+bs4来实现对单一歌单的爬取，即第二种方法。</p>
+<p>通过对网站的分析，可以发现歌单内歌曲信息都在textarea标签下，并且为json格式。</p>
+<p>于是利用bs4获取标签textarea下的所有文本，再import json解析json</p>
+<p>获取所需要的信息，并利用歌曲／歌手／专辑id来获取歌曲／歌手／专辑的链接，来进行进一步利用。</p>
+<p>代码地址：<a href="https://raw.githubusercontent.com/livexia/requests_bs4/master/netease_music.py" target="_blank" rel="external">livexia/requests_bs4</a></p>
+<p>使用方式：python netease_music.py playlist &lt;歌单：id&gt;</p>
+<p>下周TODO：爬取某一歌手(热门50单曲)／专辑的所有歌曲，增加异常的判断，增加随机UA，将数据保存在mysql中。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本周利用bs4+requests来爬取歌单信息。。。
+    
+    </summary>
+    
+      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
+    
+      <category term="bs4" scheme="http://blog.livexia.site/tags/bs4/"/>
+    
+      <category term="requests" scheme="http://blog.livexia.site/tags/requests/"/>
+    
+  </entry>
   
   <entry>
     <title>有意思的故事</title>
