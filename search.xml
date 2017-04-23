@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[The sixth week|第六周]]></title>
+      <url>%2F2017%2F04%2F23%2Fpost_7%2F</url>
+      <content type="text"><![CDATA[代码地址：livexia/requests_bs4 完成对某一歌手(热门50单曲)／专辑／歌单的所有歌曲的爬取。使用方式：python netease_music.py &lt; playlist/artist/album &gt; &lt; 对应id &gt; 安装mysql，利用docker容器。 python这边利用pymysql，利用sql语句插入，表结构目前为三张表song、author、album由于编码问题，导致数据库的汉字为乱码。 解决办法：在创建数据库时添加 character set utf8 例如： create database NeteaseMusic character set utf8;python代码中对需要输入的数据，通过encode函数，例如：info[key][0].encode(‘utf-8’)数据结构： song.sql: song_id title author_id album_id author.sql: author_id author_name album.sql: album_id album_name pic_url_link 新增存入mysql可选 分析网易云音乐404页面，当用户输入错误时，可以输出错误信息。 网易云音乐的404，不同于一般网站的404，网易云音乐类似于当输入id为不存在的值得时候，返回内部404元素。可以利用这一点来写输入错误的判断。 利用bs4解析，寻找class=‘n-for404’，若存在即为404，用户输入错误的id。程序退出 本周由于在复习概率论，导致这个异常部分没有完成，检测404还是存在部分问题。 TODO：完成异常错误部分，增加函数爬取歌手所有专辑，然后得到专辑链接，再对歌手所有进行爬起，可以得到歌手所有歌曲信息。同时在这个过程中增加随机UA本周完]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[The fifth week|第五周]]></title>
       <url>%2F2017%2F04%2F16%2Fpost_6%2F</url>
       <content type="text"><![CDATA[在上周尝试爬取网易云音乐，得到了网易云音乐的api，在听取老师建议下，我决定先暂时不利用网易云音乐的api。 尝试不使用api的方法来抓取内容，大体上现在有两种方法均可以达到目的， 一是scrapy+splash/selenium… 二是利用requests+bs4 第一种方法由于需要部署环境且在爬取过程中需要花费大量的时间，并且存在数据丢失问题 我在这一周暂时只考虑利用requests+bs4来实现对单一歌单的爬取，即第二种方法。 通过对网站的分析，可以发现歌单内歌曲信息都在textarea标签下，并且为json格式。 于是利用bs4获取标签textarea下的所有文本，再import json解析json 获取所需要的信息，并利用歌曲／歌手／专辑id来获取歌曲／歌手／专辑的链接，来进行进一步利用。 代码地址：livexia/requests_bs4 使用方式：python netease_music.py playlist &lt;歌单：id&gt; 下周TODO：爬取某一歌手(热门50单曲)／专辑的所有歌曲，增加异常的判断，增加随机UA，将数据保存在mysql中。]]></content>

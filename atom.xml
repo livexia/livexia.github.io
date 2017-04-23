@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-16T14:37:53.000Z</updated>
+  <updated>2017-04-23T14:34:10.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The sixth week|第六周</title>
+    <link href="http://blog.livexia.site/2017/04/23/post_7/"/>
+    <id>http://blog.livexia.site/2017/04/23/post_7/</id>
+    <published>2017-04-23T06:53:19.000Z</published>
+    <updated>2017-04-23T14:34:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>代码地址：<a href="https://raw.githubusercontent.com/livexia/requests_bs4/master/netease_music.py" target="_blank" rel="external">livexia/requests_bs4</a></p>
+<p>完成对某一歌手(热门50单曲)／专辑／歌单的所有歌曲的爬取。<br>使用方式：python netease_music.py &lt; playlist/artist/album &gt; &lt; 对应id &gt;</p>
+<p>安装mysql，利用docker容器。</p>
+<p>python这边利用pymysql，利用sql语句插入，表结构目前为三张表song、author、album<br>由于编码问题，导致数据库的汉字为乱码。</p>
+<p>解决办法：在创建数据库时添加 character set utf8 例如： create database NeteaseMusic character set utf8;<br>python代码中对需要输入的数据，通过encode函数，例如：info[key][0].encode(‘utf-8’)<br>数据结构：<br>    song.sql: song_id title author_id album_id<br>    author.sql: author_id author_name<br>    album.sql: album_id album_name pic_url_link</p>
+<p>新增存入mysql可选</p>
+<p>分析网易云音乐404页面，当用户输入错误时，可以输出错误信息。</p>
+<p>网易云音乐的404，不同于一般网站的404，网易云音乐类似于当输入id为不存在的值得时候，返回内部404元素。<br>可以利用这一点来写输入错误的判断。</p>
+<p>利用bs4解析，寻找class=‘n-for404’，若存在即为404，用户输入错误的id。<br>程序退出</p>
+<p>本周由于在复习概率论，导致这个异常部分没有完成，检测404还是存在部分问题。</p>
+<p>TODO：完成异常错误部分，增加函数爬取歌手所有专辑，然后得到专辑链接，再对歌手所有进行爬起，可以得到歌手所有歌曲信息。同时在这个过程中增加随机UA<br><blockquote class="blockquote-center"><h1 id="本周完"><a href="#本周完" class="headerlink" title="本周完"></a>本周完</h1></blockquote></p>
+]]></content>
+    
+    <summary type="html">
+    
+      本周完善上周爬虫
+    
+    </summary>
+    
+      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
+    
+      <category term="bs4" scheme="http://blog.livexia.site/tags/bs4/"/>
+    
+      <category term="requests" scheme="http://blog.livexia.site/tags/requests/"/>
+    
+      <category term="mysql" scheme="http://blog.livexia.site/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>The fifth week|第五周</title>
