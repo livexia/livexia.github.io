@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Kali学习笔记一]]></title>
       <url>%2F2017%2F04%2F29%2Fkali_1%2F</url>
-      <content type="text"><![CDATA[笔记内容：WiFi Wireless Security 在虚拟机中安装kali Linux，完成启动系统后的第一次更新。‘’’shellapt updateapt upgradeapt dist-upgrade‘’’需要购买合适的无线网卡来进行测试，笔记本自带网卡可能无法运行在所需要的模式。]]></content>
+      <content type="text"><![CDATA[笔记内容：WiFi Wireless Security 在虚拟机中安装kali Linux，完成启动系统后的第一次更新。123apt updateapt upgradeapt dist-upgrade 需要购买合适的无线网卡来进行测试，笔记本自带网卡可能无法运行在所需要的模式。]]></content>
     </entry>
 
     
