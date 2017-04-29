@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-23T14:34:10.000Z</updated>
+  <updated>2017-04-29T13:19:44.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali学习笔记一</title>
+    <link href="http://blog.livexia.site/2017/04/29/kali_1/"/>
+    <id>http://blog.livexia.site/2017/04/29/kali_1/</id>
+    <published>2017-04-29T13:11:51.000Z</published>
+    <updated>2017-04-29T13:19:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>笔记内容：WiFi Wireless Security</p>
+<p>在虚拟机中安装kali Linux，完成启动系统后的第一次更新。<br>‘’’shell<br>apt update<br>apt upgrade<br>apt dist-upgrade<br>‘’’<br>需要购买合适的无线网卡来进行测试，笔记本自带网卡可能无法运行在所需要的模式。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      这是我在YouTube上学习kali，以及实际进行测试的笔记
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://blog.livexia.site/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="linux" scheme="http://blog.livexia.site/tags/linux/"/>
+    
+      <category term="kali" scheme="http://blog.livexia.site/tags/kali/"/>
+    
+      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
+    
+  </entry>
   
   <entry>
     <title>The sixth week|第六周</title>

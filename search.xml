@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Kali学习笔记一]]></title>
+      <url>%2F2017%2F04%2F29%2Fkali_1%2F</url>
+      <content type="text"><![CDATA[笔记内容：WiFi Wireless Security 在虚拟机中安装kali Linux，完成启动系统后的第一次更新。‘’’shellapt updateapt upgradeapt dist-upgrade‘’’需要购买合适的无线网卡来进行测试，笔记本自带网卡可能无法运行在所需要的模式。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[The sixth week|第六周]]></title>
       <url>%2F2017%2F04%2F23%2Fpost_7%2F</url>
       <content type="text"><![CDATA[代码地址：livexia/requests_bs4 完成对某一歌手(热门50单曲)／专辑／歌单的所有歌曲的爬取。使用方式：python netease_music.py &lt; playlist/artist/album &gt; &lt; 对应id &gt; 安装mysql，利用docker容器。 python这边利用pymysql，利用sql语句插入，表结构目前为三张表song、author、album由于编码问题，导致数据库的汉字为乱码。 解决办法：在创建数据库时添加 character set utf8 例如： create database NeteaseMusic character set utf8;python代码中对需要输入的数据，通过encode函数，例如：info[key][0].encode(‘utf-8’)数据结构： song.sql: song_id title author_id album_id author.sql: author_id author_name album.sql: album_id album_name pic_url_link 新增存入mysql可选 分析网易云音乐404页面，当用户输入错误时，可以输出错误信息。 网易云音乐的404，不同于一般网站的404，网易云音乐类似于当输入id为不存在的值得时候，返回内部404元素。可以利用这一点来写输入错误的判断。 利用bs4解析，寻找class=‘n-for404’，若存在即为404，用户输入错误的id。程序退出 本周由于在复习概率论，导致这个异常部分没有完成，检测404还是存在部分问题。 TODO：完成异常错误部分，增加函数爬取歌手所有专辑，然后得到专辑链接，再对歌手所有进行爬起，可以得到歌手所有歌曲信息。同时在这个过程中增加随机UA本周完]]></content>
