@@ -17,8 +17,8 @@
   
   <entry>
     <title>Kali Tool part 1.</title>
-    <link href="http://blog.livexia.site/2017/04/30/kali_tool_1/"/>
-    <id>http://blog.livexia.site/2017/04/30/kali_tool_1/</id>
+    <link href="http://blog.livexia.site/2017/kali_tool_1/"/>
+    <id>http://blog.livexia.site/2017/kali_tool_1/</id>
     <published>2017-04-30T02:55:09.000Z</published>
     <updated>2017-04-30T03:01:58.000Z</updated>
     
@@ -38,20 +38,20 @@
     
       <category term="kali" scheme="http://blog.livexia.site/tags/kali/"/>
     
-      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
-    
       <category term="wifi" scheme="http://blog.livexia.site/tags/wifi/"/>
     
       <category term="Tool" scheme="http://blog.livexia.site/tags/Tool/"/>
+    
+      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
     
   </entry>
   
   <entry>
     <title>Kali学习笔记一</title>
-    <link href="http://blog.livexia.site/2017/04/29/kali_1/"/>
-    <id>http://blog.livexia.site/2017/04/29/kali_1/</id>
+    <link href="http://blog.livexia.site/2017/kali_1/"/>
+    <id>http://blog.livexia.site/2017/kali_1/</id>
     <published>2017-04-29T13:11:51.000Z</published>
-    <updated>2017-04-29T13:59:16.000Z</updated>
+    <updated>2017-04-29T14:00:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>笔记内容：WiFi Wireless Security</p>
 <p>在虚拟机中安装kali Linux，完成启动系统后的第一次更新。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apt update</div><div class="line">apt upgrade</div><div class="line">apt dist-upgrade</div></pre></td></tr></table></figure></p>
@@ -83,16 +83,16 @@
     
       <category term="kali" scheme="http://blog.livexia.site/tags/kali/"/>
     
-      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
-    
       <category term="wifi" scheme="http://blog.livexia.site/tags/wifi/"/>
+    
+      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
     
   </entry>
   
   <entry>
     <title>The sixth week|第六周</title>
-    <link href="http://blog.livexia.site/2017/04/23/post_7/"/>
-    <id>http://blog.livexia.site/2017/04/23/post_7/</id>
+    <link href="http://blog.livexia.site/2017/post_7/"/>
+    <id>http://blog.livexia.site/2017/post_7/</id>
     <published>2017-04-23T06:53:19.000Z</published>
     <updated>2017-04-23T14:34:10.000Z</updated>
     
@@ -130,8 +130,8 @@
   
   <entry>
     <title>The fifth week|第五周</title>
-    <link href="http://blog.livexia.site/2017/04/16/post_6/"/>
-    <id>http://blog.livexia.site/2017/04/16/post_6/</id>
+    <link href="http://blog.livexia.site/2017/post_6/"/>
+    <id>http://blog.livexia.site/2017/post_6/</id>
     <published>2017-04-16T14:35:52.000Z</published>
     <updated>2017-04-16T14:37:53.000Z</updated>
     
@@ -168,8 +168,8 @@
   
   <entry>
     <title>有意思的故事</title>
-    <link href="http://blog.livexia.site/2017/04/10/amusing/"/>
-    <id>http://blog.livexia.site/2017/04/10/amusing/</id>
+    <link href="http://blog.livexia.site/2017/amusing/"/>
+    <id>http://blog.livexia.site/2017/amusing/</id>
     <published>2017-04-10T12:18:10.000Z</published>
     <updated>2017-04-10T12:21:54.000Z</updated>
     
@@ -192,8 +192,8 @@
   
   <entry>
     <title>歌曲推荐：Seasons In The Sun</title>
-    <link href="http://blog.livexia.site/2017/04/10/music_4/"/>
-    <id>http://blog.livexia.site/2017/04/10/music_4/</id>
+    <link href="http://blog.livexia.site/2017/music_4/"/>
+    <id>http://blog.livexia.site/2017/music_4/</id>
     <published>2017-04-10T03:46:30.000Z</published>
     <updated>2017-04-10T04:07:56.000Z</updated>
     
@@ -232,8 +232,8 @@
   
   <entry>
     <title>The fourth week|第四周</title>
-    <link href="http://blog.livexia.site/2017/04/09/post_5/"/>
-    <id>http://blog.livexia.site/2017/04/09/post_5/</id>
+    <link href="http://blog.livexia.site/2017/post_5/"/>
+    <id>http://blog.livexia.site/2017/post_5/</id>
     <published>2017-04-09T11:02:59.000Z</published>
     <updated>2017-04-09T11:06:50.000Z</updated>
     
@@ -269,8 +269,8 @@
   
   <entry>
     <title>个人随想</title>
-    <link href="http://blog.livexia.site/2017/04/08/caprice/"/>
-    <id>http://blog.livexia.site/2017/04/08/caprice/</id>
+    <link href="http://blog.livexia.site/2017/caprice/"/>
+    <id>http://blog.livexia.site/2017/caprice/</id>
     <published>2017-04-08T15:58:35.000Z</published>
     <updated>2017-04-18T13:02:24.000Z</updated>
     
@@ -301,8 +301,8 @@
   
   <entry>
     <title>推荐过的歌曲</title>
-    <link href="http://blog.livexia.site/2017/04/05/music_list/"/>
-    <id>http://blog.livexia.site/2017/04/05/music_list/</id>
+    <link href="http://blog.livexia.site/2017/music_list/"/>
+    <id>http://blog.livexia.site/2017/music_list/</id>
     <published>2017-04-05T14:31:22.000Z</published>
     <updated>2017-04-10T03:46:24.000Z</updated>
     
@@ -335,8 +335,8 @@
   
   <entry>
     <title>歌曲推荐：我的一个道姑朋友（Cover：Lon）</title>
-    <link href="http://blog.livexia.site/2017/04/05/music_3/"/>
-    <id>http://blog.livexia.site/2017/04/05/music_3/</id>
+    <link href="http://blog.livexia.site/2017/music_3/"/>
+    <id>http://blog.livexia.site/2017/music_3/</id>
     <published>2017-04-05T13:23:08.000Z</published>
     <updated>2017-04-10T04:07:52.000Z</updated>
     
@@ -389,8 +389,8 @@
   
   <entry>
     <title>歌曲推荐：遥远的歌</title>
-    <link href="http://blog.livexia.site/2017/04/04/music_2/"/>
-    <id>http://blog.livexia.site/2017/04/04/music_2/</id>
+    <link href="http://blog.livexia.site/2017/music_2/"/>
+    <id>http://blog.livexia.site/2017/music_2/</id>
     <published>2017-04-04T14:17:27.000Z</published>
     <updated>2017-04-10T04:07:42.000Z</updated>
     
@@ -444,8 +444,8 @@
   
   <entry>
     <title>个人直播地址</title>
-    <link href="http://blog.livexia.site/2017/04/04/live_url/"/>
-    <id>http://blog.livexia.site/2017/04/04/live_url/</id>
+    <link href="http://blog.livexia.site/2017/live_url/"/>
+    <id>http://blog.livexia.site/2017/live_url/</id>
     <published>2017-04-04T13:15:28.000Z</published>
     <updated>2017-04-08T16:24:51.000Z</updated>
     
@@ -474,8 +474,8 @@
   
   <entry>
     <title>歌曲推荐：其实，我就在你方圆几里</title>
-    <link href="http://blog.livexia.site/2017/04/03/music_1/"/>
-    <id>http://blog.livexia.site/2017/04/03/music_1/</id>
+    <link href="http://blog.livexia.site/2017/music_1/"/>
+    <id>http://blog.livexia.site/2017/music_1/</id>
     <published>2017-04-03T09:15:08.000Z</published>
     <updated>2017-04-10T04:07:34.000Z</updated>
     
@@ -526,8 +526,8 @@
   
   <entry>
     <title>The third week|第三周</title>
-    <link href="http://blog.livexia.site/2017/04/03/post_4/"/>
-    <id>http://blog.livexia.site/2017/04/03/post_4/</id>
+    <link href="http://blog.livexia.site/2017/post_4/"/>
+    <id>http://blog.livexia.site/2017/post_4/</id>
     <published>2017-04-03T03:01:06.000Z</published>
     <updated>2017-04-05T12:43:20.000Z</updated>
     
@@ -565,8 +565,8 @@
   
   <entry>
     <title>The second week|第二周</title>
-    <link href="http://blog.livexia.site/2017/04/03/post_3/"/>
-    <id>http://blog.livexia.site/2017/04/03/post_3/</id>
+    <link href="http://blog.livexia.site/2017/post_3/"/>
+    <id>http://blog.livexia.site/2017/post_3/</id>
     <published>2017-04-03T02:38:44.000Z</published>
     <updated>2017-04-05T12:43:15.000Z</updated>
     
@@ -601,8 +601,8 @@
   
   <entry>
     <title>The first week|第一周</title>
-    <link href="http://blog.livexia.site/2017/04/03/post_2/"/>
-    <id>http://blog.livexia.site/2017/04/03/post_2/</id>
+    <link href="http://blog.livexia.site/2017/post_2/"/>
+    <id>http://blog.livexia.site/2017/post_2/</id>
     <published>2017-04-03T02:14:58.000Z</published>
     <updated>2017-04-05T12:43:10.000Z</updated>
     
@@ -759,8 +759,8 @@ tutorial
   
   <entry>
     <title>Innovation practice|创新实践 方向选择</title>
-    <link href="http://blog.livexia.site/2017/04/03/post_1/"/>
-    <id>http://blog.livexia.site/2017/04/03/post_1/</id>
+    <link href="http://blog.livexia.site/2017/post_1/"/>
+    <id>http://blog.livexia.site/2017/post_1/</id>
     <published>2017-04-03T01:59:51.000Z</published>
     <updated>2017-04-05T12:43:05.000Z</updated>
     
