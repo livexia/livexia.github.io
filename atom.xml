@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-04-30T03:01:58.000Z</updated>
+  <updated>2017-05-07T13:52:34.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -16,13 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>The eighth week|第八周</title>
+    <link href="http://blog.livexia.site/2017/post_8/"/>
+    <id>http://blog.livexia.site/2017/post_8/</id>
+    <published>2017-05-07T13:51:00.000Z</published>
+    <updated>2017-05-07T13:52:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>完成异常错误部分，增加函数爬取歌手所有专辑，然后得到专辑链接，再对歌手所有进行爬起，可以得到歌手所有歌曲信息。同时在这个过程中增加随机UA</p>
+<p>本周主要目标为通过爬取歌手所有专辑，再进一步爬取所有专辑中的所有歌曲。</p>
+<p>首先是歌手专辑页面的翻页处理，这里可以利用修改传入参数来在一页内获取所有专辑。<br><a href="http://music.163.com/#/artist/album?id=13193&amp;limit=12&amp;offset=0" target="_blank" rel="external">http://music.163.com/#/artist/album?id=13193&amp;limit=12&amp;offset=0</a><br>观察可得到，参数limit后面数字代表该页最多显示专辑数目，[offset/limit]+1为第几页。<br>在这里可以另limit=1200，offset=0，以求完整，一般来说1200张专辑应该是不可能实现的。</p>
+<p>歌手专辑存放在u 了、标签中，注意到u 了、标签中存在属性为data-id的值为歌手id。<br>利用这一点获得所需要的范围，利用bs4获取所需要的所有信息。</p>
+<p>可以完成对输入歌手id的歌手所有专辑歌曲进行爬取，并且存入mysql，由于我是先对歌手所有专辑爬取，然后再对每一专辑进行爬取，所以需要再每爬取完一张专辑就需要操作一次数据库，可能会导致效率低下。<br>我也有一个想法就是先将歌曲信息暂存在字典中，但是在歌曲数目巨大会造成较大的资源消耗。<br>这里留待后期优化。</p>
+<p>这样爬取会在数据库中存下歌手所有歌曲，所有歌手专辑，以及与该歌手合唱的歌手id。<br>可以利用这一点来爬取得到与该歌手合唱的不精确的结果（可以做推荐）。</p>
+<p>本周还优化了项目结构，使得项目清晰明了。</p>
+<pre><code>requests_bs4
+├── NeteaseMusic
+│   ├── album.py //爬取指定歌手的所有专辑
+│   ├── getinfo.py //爬取指定专辑、歌单、歌手的热门50单曲
+│   ├── mysql.py //数据存入mysql
+│   └── urlparameter.py //连接参数，headers......
+├── README.md
+└── neteasemusic.py  //程序入口
+</code></pre><p> 完成随机UA，利用random.choice()函数从一个含有一堆UA的list中随机取得ua，形成headers。<br>当爬取所有专辑会用同一个ua，当爬取多张专辑时每一张专辑会利用一个UA。</p>
+<p>代码github：<a href="https://github.com/livexia/requests_bs4" target="_blank" rel="external">https://github.com/livexia/requests_bs4</a><br>使用方式见readme.md<br>待解决：用户输入错误报错</p>
+<p>下周：增加多线程，加快爬取速度、完成异常输出、学习代理池。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本周完善上周爬虫
+    
+    </summary>
+    
+      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
+    
+      <category term="bs4" scheme="http://blog.livexia.site/tags/bs4/"/>
+    
+      <category term="requests" scheme="http://blog.livexia.site/tags/requests/"/>
+    
+      <category term="mysql" scheme="http://blog.livexia.site/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kali Tool part 1.</title>
     <link href="http://blog.livexia.site/2017/kali_tool_1/"/>
     <id>http://blog.livexia.site/2017/kali_tool_1/</id>
     <published>2017-04-30T02:55:09.000Z</published>
-    <updated>2017-04-30T03:01:58.000Z</updated>
+    <updated>2017-04-30T07:00:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>DoS Tool:<br><a href="https://github.com/zanyarjamal/xerxes" target="_blank" rel="external">XERXES</a><br><a href="http://wiki.hping.org/" target="_blank" rel="external">hping3</a><br>笔记结束</p>
+    <content type="html"><![CDATA[<p>DoS Tool:<br><a href="https://github.com/zanyarjamal/xerxes" target="_blank" rel="external">XERXES</a><br><a href="http://wiki.hping.org/" target="_blank" rel="external">hping3</a>、</p>
+<p>Anonymized:<br><a href="https://github.com/Und3rf10w/kali-anonsurf" target="_blank" rel="external">kali-anonstealth</a><br>笔记结束</p>
 ]]></content>
     
     <summary type="html">
@@ -272,7 +319,7 @@
     <link href="http://blog.livexia.site/2017/caprice/"/>
     <id>http://blog.livexia.site/2017/caprice/</id>
     <published>2017-04-08T15:58:35.000Z</published>
-    <updated>2017-04-18T13:02:24.000Z</updated>
+    <updated>2017-05-02T14:41:11.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>2017-04-18 21:02:14+08:00<br><strong>终究意难平</strong></p>
 <p>2017-04-17 21:12:10+08:00<br>（出自网易云音乐评论，歌曲：凉城）<br><strong>我又不乱来_T: 我有一瓶09年9月26日她随手递给我的统一冰红茶。至今未拆。</strong></p>

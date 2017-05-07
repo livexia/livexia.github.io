@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,scrapy," />
+  <meta name="keywords" content="python,bs4,requests,mysql," />
 
 
 
@@ -91,17 +91,17 @@
 
 
 
-<meta name="description" content="由于中文教程版本以及目标网站的下线，我改学英文最新的教程。 目标链接为：toscrape">
-<meta name="keywords" content="python,scrapy">
+<meta name="description" content="本周完善上周爬虫">
+<meta name="keywords" content="python,bs4,requests,mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The second week|第二周">
-<meta property="og:url" content="http://blog.livexia.site/2017/04/03/post_3/index.html">
+<meta property="og:title" content="The eighth week|第八周">
+<meta property="og:url" content="http://blog.livexia.site/2017/post_8/index.html">
 <meta property="og:site_name" content="多为垃圾文">
-<meta property="og:description" content="由于中文教程版本以及目标网站的下线，我改学英文最新的教程。 目标链接为：toscrape">
-<meta property="og:updated_time" content="2017-04-05T12:43:15.000Z">
+<meta property="og:description" content="本周完善上周爬虫">
+<meta property="og:updated_time" content="2017-05-07T13:52:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The second week|第二周">
-<meta name="twitter:description" content="由于中文教程版本以及目标网站的下线，我改学英文最新的教程。 目标链接为：toscrape">
+<meta name="twitter:title" content="The eighth week|第八周">
+<meta name="twitter:description" content="本周完善上周爬虫">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.livexia.site/2017/04/03/post_3/"/>
+  <link rel="canonical" href="http://blog.livexia.site/2017/post_8/"/>
 
 
 
 
 
-  <title> The second week|第二周 | 多为垃圾文 </title>
+  <title> The eighth week|第八周 | 多为垃圾文 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -327,7 +327,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://blog.livexia.site/2017/04/03/post_3/">
+    <link itemprop="mainEntityOfPage" href="http://blog.livexia.site/2017/post_8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="livexia">
@@ -348,7 +348,7 @@
             
             
               
-                The second week|第二周
+                The eighth week|第八周
               
             
           </h1>
@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-04-05T20:43:15+08:00">
-                2017-04-05
+              <time title="更新于" itemprop="dateModified" datetime="2017-05-07T21:52:34+08:00">
+                2017-05-07
               </time>
             
           </span>
@@ -404,7 +404,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/03/post_3/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/post_8/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -413,7 +413,7 @@
 
           
           
-             <span id="/2017/04/03/post_3/" class="leancloud_visitors" data-flag-title="The second week|第二周">
+             <span id="/2017/post_8/" class="leancloud_visitors" data-flag-title="The eighth week|第八周">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -437,7 +437,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  212
+                  648
                 </span>
               
 
@@ -453,12 +453,16 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
           
 
+          
+              <div class="post-description">
+                  本周完善上周爬虫
+              </div>
           
 
         </div>
@@ -472,17 +476,24 @@
       
 
       
-        <p> 由于中文教程版本以及目标网站的下线，我改学英文最新的教程。</p>
-<p>目标链接为：<a href="http://quotes.toscrape.com/" target="_blank" rel="external">toscrape</a><br><a id="more"></a><br>完成网站练习之后，我开始尝试爬取豆瓣电影top250，由于豆瓣使用了检测UA信息的反爬虫技术，但是我没有添加ua信息，导致爬虫返回403，没有取得任何结果。</p>
-<p>在settings.py中加入ua，问题解决。</p>
-<pre><code>scrapy crawl top250 -o top250.json
-</code></pre><p>启动spider，将结果储存在top250.json文件中，由于编码问题，json无法直接阅读。</p>
-<pre><code>scrapy crawl top250 -o top250.csv
-</code></pre><p>启动spider，将结果储存在top250.csv文件中</p>
-<p>利用Pipeline 处理爬取得到的数据，固定格式。</p>
-<p>转化编码失败，通过pipeline错误。</p>
-<p>TODO：完善爬虫，完整解决输出格式问题，加入随机ua模块。</p>
-<p>代码：<a href="https://github.com/livexia/douban_top250" target="_blank" rel="external">livexia/douban_top250</a></p>
+        <p>完成异常错误部分，增加函数爬取歌手所有专辑，然后得到专辑链接，再对歌手所有进行爬起，可以得到歌手所有歌曲信息。同时在这个过程中增加随机UA</p>
+<p>本周主要目标为通过爬取歌手所有专辑，再进一步爬取所有专辑中的所有歌曲。</p>
+<p>首先是歌手专辑页面的翻页处理，这里可以利用修改传入参数来在一页内获取所有专辑。<br><a href="http://music.163.com/#/artist/album?id=13193&amp;limit=12&amp;offset=0" target="_blank" rel="external">http://music.163.com/#/artist/album?id=13193&amp;limit=12&amp;offset=0</a><br>观察可得到，参数limit后面数字代表该页最多显示专辑数目，[offset/limit]+1为第几页。<br>在这里可以另limit=1200，offset=0，以求完整，一般来说1200张专辑应该是不可能实现的。</p>
+<p>歌手专辑存放在u 了、标签中，注意到u 了、标签中存在属性为data-id的值为歌手id。<br>利用这一点获得所需要的范围，利用bs4获取所需要的所有信息。</p>
+<p>可以完成对输入歌手id的歌手所有专辑歌曲进行爬取，并且存入mysql，由于我是先对歌手所有专辑爬取，然后再对每一专辑进行爬取，所以需要再每爬取完一张专辑就需要操作一次数据库，可能会导致效率低下。<br>我也有一个想法就是先将歌曲信息暂存在字典中，但是在歌曲数目巨大会造成较大的资源消耗。<br>这里留待后期优化。</p>
+<p>这样爬取会在数据库中存下歌手所有歌曲，所有歌手专辑，以及与该歌手合唱的歌手id。<br>可以利用这一点来爬取得到与该歌手合唱的不精确的结果（可以做推荐）。</p>
+<p>本周还优化了项目结构，使得项目清晰明了。</p>
+<pre><code>requests_bs4
+├── NeteaseMusic
+│   ├── album.py //爬取指定歌手的所有专辑
+│   ├── getinfo.py //爬取指定专辑、歌单、歌手的热门50单曲
+│   ├── mysql.py //数据存入mysql
+│   └── urlparameter.py //连接参数，headers......
+├── README.md
+└── neteasemusic.py  //程序入口
+</code></pre><p> 完成随机UA，利用random.choice()函数从一个含有一堆UA的list中随机取得ua，形成headers。<br>当爬取所有专辑会用同一个ua，当爬取多张专辑时每一张专辑会利用一个UA。</p>
+<p>代码github：<a href="https://github.com/livexia/requests_bs4" target="_blank" rel="external">https://github.com/livexia/requests_bs4</a><br>使用方式见readme.md<br>待解决：用户输入错误报错</p>
+<p>下周：增加多线程，加快爬取速度、完成异常输出、学习代理池。</p>
 
       
     </div>
@@ -514,7 +525,11 @@
           
             <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/scrapy/" rel="tag"># scrapy</a>
+            <a href="/tags/bs4/" rel="tag"># bs4</a>
+          
+            <a href="/tags/requests/" rel="tag"># requests</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -527,18 +542,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/03/post_4/" rel="next" title="The third week|第三周">
-                <i class="fa fa-chevron-left"></i> The third week|第三周
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/03/post_2/" rel="prev" title="The first week|第一周">
-                The first week|第一周 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/kali_tool_1/" rel="prev" title="Kali Tool part 1.">
+                Kali Tool part 1. <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -627,7 +638,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
