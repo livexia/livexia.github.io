@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-05-14T10:56:52.000Z</updated>
+  <updated>2017-05-21T16:07:08.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>The first ten weeks|第十周</title>
+    <link href="http://blog.livexia.site/2017/post_10/"/>
+    <id>http://blog.livexia.site/2017/post_10/</id>
+    <published>2017-05-21T16:05:34.000Z</published>
+    <updated>2017-05-21T16:07:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>爬取404:在爬虫访问到不可达链接时，网易云音乐并不会直接返回404状态，这个时候利用bs4解析网易云音乐展示的404，可以解决用户输入或者网易云音乐中不存在歌手页的异常。当用户不存在专辑时不显示404只展示暂无专辑（坑爹），其实是网易云音乐自己的分类没有处理好，通过解析特殊div实现。再结合之前的try语句，可以较好处理，不存在歌手页面，歌手页面没有专辑，专辑没有歌曲三种情况，都已经已经实现。</p>
+<p>断点爬取：在爬取过程中会产生一系列的问题，比如我在连夜爬取时，由于之前设置了路由器晚上自动重启，导致爬虫停滞，目前我通过定位断点歌手处于目录的具体位置，设置爬取开始点完成断点设计。这样需要修改参数，不方便。通过本地新建文件用来存放：待爬取和列队中的歌手以及歌手专辑。在爬取完一个歌手后将其从queue.txt移动到crawled.txt，下次爬取接着从queue.txt开始，专辑的处理类似。对于专辑的断点采取通过判断queue.txt文件大小来判断。这里卡在一个bug上用了略多时间，基本功能实现，尚未完全成功。这里爬取一页数据后发现，爬取中只爬取了一半的数据，应该是我在通过for…in遍历list的同时删除了list中的元素，导致跳过一个值，通过使用while循环解决。</p>
+<p>修改程序结构，在爬取歌手和歌手所有专辑时，仅仅保存歌手和专辑id，不进行数据库的写入，当爬取歌曲信息时再写入数据库，对于同一歌手专辑仅进行初次存入。</p>
+<p>代码github：<a href="https://github.com/livexia/requests_bs4" target="_blank" rel="external">https://github.com/livexia/requests_bs4</a><br>下周：完成断点，增加多线程，尝试使用代理池。本周由于所花时间略少，在一个小bug上也卡了略长的时间，导致进度有点慢。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      本周完善上周爬虫
+    
+    </summary>
+    
+      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
+    
+      <category term="bs4" scheme="http://blog.livexia.site/tags/bs4/"/>
+    
+      <category term="requests" scheme="http://blog.livexia.site/tags/requests/"/>
+    
+      <category term="mysql" scheme="http://blog.livexia.site/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>The ninth week|第九周</title>
     <link href="http://blog.livexia.site/2017/post_9/"/>
     <id>http://blog.livexia.site/2017/post_9/</id>
     <published>2017-05-14T10:55:03.000Z</published>
-    <updated>2017-05-14T10:56:52.000Z</updated>
+    <updated>2017-05-14T11:48:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>异常输出：<br>可以利用当请求不存在的地址时，网易云音乐不会直接返回404，而是会利用js生成404页面。利用bs4可以解析到404字样。但是这样略麻烦，我直接利用python的异常方法，当用户输入错误id（不存在ID）时，bs4无法解析到应有的信息，那么就会跑出异常，在这里就可以判断是否用户输入错误。</p>
 <p>增加多线程、代理池这两个由于我爬虫规模略小，目前没必要增加，暂且搁置。</p>
@@ -126,9 +158,9 @@
     
       <category term="wifi" scheme="http://blog.livexia.site/tags/wifi/"/>
     
-      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
-    
       <category term="Tool" scheme="http://blog.livexia.site/tags/Tool/"/>
+    
+      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
     
   </entry>
   
