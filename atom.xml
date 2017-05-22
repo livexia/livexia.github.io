@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-05-21T16:15:59.000Z</updated>
+  <updated>2017-05-22T13:50:39.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali学习笔记二</title>
+    <link href="http://blog.livexia.site/2017/kali_2/"/>
+    <id>http://blog.livexia.site/2017/kali_2/</id>
+    <published>2017-05-22T13:44:32.000Z</published>
+    <updated>2017-05-22T13:50:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="并发线程限制"><a href="#并发线程限制" class="headerlink" title="并发线程限制"></a>并发线程限制</h2><h3 id="工具：ulimit"><a href="#工具：ulimit" class="headerlink" title="工具：ulimit"></a>工具：ulimit</h3><ul>
+<li>并发线程限制Ulimit于限制当前 shell 内进程的资源使  查看默认值ulimit –a</li>
+<li>全局配置文件 :/etc/security/limits<pre><code>&lt;domain&gt; &lt;type&gt; &lt;item&gt; &lt;value&gt;  
+</code></pre></li>
+<li>用途距离<ul>
+<li>限制文件块大小  :ulimit – s 100</li>
+<li>限制shell内存使用 :ulimit -m 5000 -v 5000 </li>
+</ul>
+</li>
+<li>没有直接对socket数量的限制参数 <ul>
+<li>Linux系统中一切都是文件件，运行中的文件叫做进程</li>
+<li>ulimite –n 800000</li>
+</ul>
+</li>
+<li>在.bashrc/.zshrc中加入 ulimit –n 800000 后期使用应用层的ddos应用需求</li>
+</ul>
+<h2 id="电源优化"><a href="#电源优化" class="headerlink" title="电源优化"></a>电源优化</h2><ul>
+<li>渗透测试系统耗电较大</li>
+<li><p>延长电池寿命  </p>
+<ul>
+<li>无操作挂起、关闭显示器降低显示器亮度 不使用时关闭无线网卡 </li>
+<li>开启硬盘省电选项<pre><code>+ hdparm -i /dev/sda if AdvancedPM=yes then hdparm -B 1 -S 12 /dev/ sda   
+</code></pre></li>
+<li>启动笔记本模式</li>
+</ul>
+</li>
+<li><p>笔记本模式，脚本：</p>
+<pre><code>#!/bin/bash  
+
+currentMode=$(cat /proc/sys/vm/laptop_mode)  
+
+if [ $currentMode -eq 0 ] 
+then 
+echo &quot;5&quot; &gt; /proc/sys/vm/laptop_mode 
+echo &quot;Laptop Mode Enabled” 
+else 
+echo &quot;0&quot; &gt; /proc/sys/vm/laptop_mode 
+echo &quot;Laptop Mode Disabled” 
+fi
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      网课笔记
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://blog.livexia.site/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="linux" scheme="http://blog.livexia.site/tags/linux/"/>
+    
+      <category term="kali" scheme="http://blog.livexia.site/tags/kali/"/>
+    
+      <category term="wifi" scheme="http://blog.livexia.site/tags/wifi/"/>
+    
+      <category term="Penetration Testing" scheme="http://blog.livexia.site/tags/Penetration-Testing/"/>
+    
+  </entry>
   
   <entry>
     <title>python问题</title>
@@ -727,164 +796,6 @@
     
       &lt;p&gt; 由于中文教程版本以及目标网站的下线，我改学英文最新的教程。&lt;/p&gt;
 &lt;p&gt;目标链接为：&lt;a href=&quot;http://quotes.toscrape.com/&quot;&gt;toscrape&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="创新实践" scheme="http://blog.livexia.site/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5/"/>
-    
-    
-      <category term="python" scheme="http://blog.livexia.site/tags/python/"/>
-    
-      <category term="scrapy" scheme="http://blog.livexia.site/tags/scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The first week|第一周</title>
-    <link href="http://blog.livexia.site/2017/post_2/"/>
-    <id>http://blog.livexia.site/2017/post_2/</id>
-    <published>2017-04-03T02:14:58.000Z</published>
-    <updated>2017-04-05T12:43:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="入门学习scrapy"><a href="#入门学习scrapy" class="headerlink" title="入门学习scrapy"></a>入门学习scrapy</h2><p>系统：osx<br><a id="more"></a></p>
-<blockquote>
-<p>按照<a href="http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/tutorial.html" target="_blank" rel="external">scrapy-chs.readthedocs.io</a></p>
-<p>目标网站 <a href="http://www.dmoz.org/" target="_blank" rel="external">Open Directory Project</a></p>
-</blockquote>
-<p>安装Scrapy</p>
-<p>Anaconda：</p>
-<pre><code>conda install -c scrapinghub scrapy
-</code></pre><p>创建项目tutorial</p>
-<pre><code>$ scrapy startproject tutorial
-</code></pre><p>项目结构</p>
-<pre><code>$ tree tutorial
-tutorial
-├── scrapy.cfg
-└── tutorial
-   ├── __init__.py
-   ├── __pycache__
-   ├── items.py
-   ├── middlewares.py
-   ├── pipelines.py
-   ├── settings.py
-   └── spiders
-       ├── __init__.py
-       └── __pycache__
-</code></pre><p>定义item</p>
-<p>用来存放名字、url、网站的描述</p>
-<pre><code>vim ./totorial/totorial/items.py
-import scrapy
-
-class DmozItem(scrapy.Item):
-   title = scrapy.Field()
-   link = scrapy.Field()
-   desc = scrapy.Field()
-   pass
-</code></pre><p>写一个spider</p>
-<pre><code>$ vim ./tutorial/tutorial/spiders/dmoz_spider.py
-
-import scrapy
-
-class DmozSpider(scrapy.Spider):
-   name = &quot;dmoz&quot;
-   allowed_domains = [&quot;dmoz.org&quot;]
-   start_urls = [
-       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;,
-       &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&quot;
-   ]
-
-   def parse(self, response):
-       filename = response.url.split(&quot;/&quot;)[-2] + &apos;.html&apos;
-       with open(filename, &apos;wb&apos;) as f:
-           f.write(response.body)
-
-#name : 该spider的名字，唯一
-
-#start_urls : 该spider的起始地址，后续的地址由起始地址爬取得到
-
-#parse() 是spider的一个方法。 被调用时，每个初始URL完成下载后生成的 Response 对象将会作为唯一的参数传递给该函数。 该方法负责解析返回的数据(response data)，提取数据(生成item)以及生成需要进一步处理的URL的 Request 对象。
-</code></pre><p>启动spider：<br>根目录下</p>
-<pre><code>$ scrapy crawl dmoz
-2017-03-16 14:55:22 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: tutorial)
-2017-03-16 14:55:22 [scrapy.utils.log] INFO: Overridden settings: {&apos;BOT_NAME&apos;: &apos;tutorial&apos;, &apos;NEWSPIDER_MODULE&apos;: &apos;tutorial.spiders&apos;, &apos;ROBOTSTXT_OBEY&apos;: True, &apos;SPIDER_MODULES&apos;: [&apos;tutorial.spiders&apos;]}
-2017-03-16 14:55:22 [scrapy.middleware] INFO: Enabled extensions:
-[&apos;scrapy.extensions.corestats.CoreStats&apos;,
-&apos;scrapy.extensions.telnet.TelnetConsole&apos;,
-&apos;scrapy.extensions.logstats.LogStats&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
-[&apos;scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.useragent.UserAgentMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.retry.RetryMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.redirect.RedirectMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.cookies.CookiesMiddleware&apos;,
-&apos;scrapy.downloadermiddlewares.stats.DownloaderStats&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled spider middlewares:
-[&apos;scrapy.spidermiddlewares.httperror.HttpErrorMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.offsite.OffsiteMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.referer.RefererMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.urllength.UrlLengthMiddleware&apos;,
-&apos;scrapy.spidermiddlewares.depth.DepthMiddleware&apos;]
-2017-03-16 14:55:23 [scrapy.middleware] INFO: Enabled item pipelines:
-[]
-2017-03-16 14:55:23 [scrapy.core.engine] INFO: Spider opened
-2017-03-16 14:55:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-03-16 14:55:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
-2017-03-16 14:55:25 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/robots.txt&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&gt; (referer: None)
-2017-03-16 14:55:26 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-03-16 14:55:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{&apos;downloader/request_bytes&apos;: 734,
-&apos;downloader/request_count&apos;: 3,
-&apos;downloader/request_method_count/GET&apos;: 3,
-&apos;downloader/response_bytes&apos;: 16015,
-&apos;downloader/response_count&apos;: 3,
-&apos;downloader/response_status_count/200&apos;: 3,
-&apos;finish_reason&apos;: &apos;finished&apos;,
-&apos;finish_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 26, 472574),
-&apos;log_count/DEBUG&apos;: 4,
-&apos;log_count/INFO&apos;: 7,
-&apos;response_received_count&apos;: 3,
-&apos;scheduler/dequeued&apos;: 2,
-&apos;scheduler/dequeued/memory&apos;: 2,
-&apos;scheduler/enqueued&apos;: 2,
-&apos;scheduler/enqueued/memory&apos;: 2,
-&apos;start_time&apos;: datetime.datetime(2017, 3, 16, 6, 55, 23, 30734)}
-2017-03-16 14:55:26 [scrapy.core.engine] INFO: Spider closed (finished)
-</code></pre><p>目录结构</p>
-<pre><code>$ tree tutorial
-tutorial
-├── Books.html
-├── Resources.html
-├── scrapy.cfg
-└── tutorial
-   ├── __init__.py
-   ├── __pycache__
-   │   ├── __init__.cpython-36.pyc
-   │   └── settings.cpython-36.pyc
-   ├── items.py
-   ├── middlewares.py
-   ├── pipelines.py
-   ├── settings.py
-   └── spiders
-       ├── __init__.py
-       ├── __pycache__
-       │   ├── __init__.cpython-36.pyc
-       │   └── dmoz_spider.cpython-36.pyc
-       └── dmoz_spider.py
-</code></pre><p>提取数据<br>XPath</p>
-<p>周总结：周一、二学习了部分正则（没有做笔记），之后看了部分的urllib，在之后就是开始学习scrapy，目前才处于开始学习的阶段。<br>因为期间电脑磁盘出了问题，学习时间有所下降。</p>
-<p>下周目标：入门学习scrapy，完整实现爬取dmoz，尝试利用scrapy对豆瓣电影top 250进行爬取。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;入门学习scrapy&quot;&gt;&lt;a href=&quot;#入门学习scrapy&quot; class=&quot;headerlink&quot; title=&quot;入门学习scrapy&quot;&gt;&lt;/a&gt;入门学习scrapy&lt;/h2&gt;&lt;p&gt;系统：osx&lt;br&gt;
     
     </summary>
     
