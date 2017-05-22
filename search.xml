@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Kali学习笔记二]]></title>
       <url>%2F2017%2Fkali_2%2F</url>
-      <content type="text"><![CDATA[并发线程限制工具：ulimit 并发线程限制Ulimit于限制当前 shell 内进程的资源使 查看默认值ulimit –a 全局配置文件 :/etc/security/limits \ \ \ \ 用途距离 限制文件块大小 :ulimit – s 100 限制shell内存使用 :ulimit -m 5000 -v 5000 没有直接对socket数量的限制参数 Linux系统中一切都是文件件，运行中的文件叫做进程 ulimite –n 800000 在.bashrc/.zshrc中加入 ulimit –n 800000 后期使用应用层的ddos应用需求 电源优化 渗透测试系统耗电较大 延长电池寿命 无操作挂起、关闭显示器降低显示器亮度 不使用时关闭无线网卡 开启硬盘省电选项+ hdparm -i /dev/sda if AdvancedPM=yes then hdparm -B 1 -S 12 /dev/ sda 启动笔记本模式 笔记本模式，脚本： #!/bin/bash currentMode=$(cat /proc/sys/vm/laptop_mode) if [ $currentMode -eq 0 ] then echo &quot;5&quot; &gt; /proc/sys/vm/laptop_mode echo &quot;Laptop Mode Enabled” else echo &quot;0&quot; &gt; /proc/sys/vm/laptop_mode echo &quot;Laptop Mode Disabled” fi]]></content>
+      <content type="text"><![CDATA[并发线程限制工具：ulimit 并发线程限制Ulimit于限制当前 shell 内进程的资源使 查看默认值ulimit –a 全局配置文件 :/etc/security/limits &lt;domain&gt; &lt;type&gt; &lt;item&gt; &lt;value&gt; 用途距离 限制文件块大小 :ulimit – s 100 限制shell内存使用 :ulimit -m 5000 -v 5000 没有直接对socket数量的限制参数 Linux系统中一切都是文件件，运行中的文件叫做进程 ulimite –n 800000 在.bashrc/.zshrc中加入 ulimit –n 800000 后期使用应用层的ddos应用需求 电源优化 渗透测试系统耗电较大 延长电池寿命 无操作挂起、关闭显示器降低显示器亮度 不使用时关闭无线网卡 开启硬盘省电选项+ hdparm -i /dev/sda if AdvancedPM=yes then hdparm -B 1 -S 12 /dev/ sda 启动笔记本模式 笔记本模式，脚本： #!/bin/bash currentMode=$(cat /proc/sys/vm/laptop_mode) if [ $currentMode -eq 0 ] then echo &quot;5&quot; &gt; /proc/sys/vm/laptop_mode echo &quot;Laptop Mode Enabled” else echo &quot;0&quot; &gt; /proc/sys/vm/laptop_mode echo &quot;Laptop Mode Disabled” fi]]></content>
     </entry>
 
     
