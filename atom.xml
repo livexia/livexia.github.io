@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.livexia.site/"/>
-  <updated>2017-05-22T13:58:46.000Z</updated>
+  <updated>2017-05-22T14:00:13.000Z</updated>
   <id>http://blog.livexia.site/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.livexia.site/2017/kali_2/"/>
     <id>http://blog.livexia.site/2017/kali_2/</id>
     <published>2017-05-22T13:44:32.000Z</published>
-    <updated>2017-05-22T13:58:46.000Z</updated>
+    <updated>2017-05-22T14:00:13.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="并发线程限制"><a href="#并发线程限制" class="headerlink" title="并发线程限制"></a>并发线程限制</h2><h3 id="工具：ulimit"><a href="#工具：ulimit" class="headerlink" title="工具：ulimit"></a>工具：ulimit</h3><ul>
 <li>并发线程限制Ulimit于限制当前 shell 内进程的资源使  查看默认值ulimit –a</li>
@@ -45,7 +45,10 @@
 <li><p>延长电池寿命  </p>
 <ul>
 <li>无操作挂起、关闭显示器降低显示器亮度 不使用时关闭无线网卡 </li>
-<li>开启硬盘省电选项<br> hdparm -i /dev/sda if AdvancedPM=yes then hdparm -B 1 -S 12 /dev/ sda   </li>
+<li>开启硬盘省电选项<ul>
+<li>hdparm -i /dev/sda if AdvancedPM=yes then hdparm -B 1 -S 12 /dev/ sda   </li>
+</ul>
+</li>
 <li>启动笔记本模式</li>
 </ul>
 </li>
